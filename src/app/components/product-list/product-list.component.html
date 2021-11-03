@@ -1,0 +1,56 @@
+
+<!-- The idea is creating a list separated by categories of different products
+    in the store 
+    (And for technical problems, the cart it's in the same page)-->    
+        <div class="row">
+            <div class="col-md-6">
+                <table class="table caption-top">
+                 <caption>Processors Available</caption>
+                    <tbody *ngFor = "let products of products">
+                        <tr *ngIf = "products.category === 'Processors'" >
+                            <app-product-item [product] = "products"></app-product-item>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>   
+        <div class="row">
+            <div class="col-md-6">
+                <table class="table caption-top">
+                 <caption>Graphics Cards Available</caption>
+                    <tbody *ngFor = "let products of products">
+                        <tr *ngIf = "products.category === 'Graphics Card'" >
+                            <app-product-item [product] = "products"></app-product-item>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <table class="table caption-top">
+                 <caption>Keyboards Available</caption>
+                    <tbody *ngFor = "let products of products">
+                        <tr *ngIf = "products.category === 'Keyboard'" >
+                           <app-product-item [product] = "products"></app-product-item>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+  
+        <div class="row">
+            <div class="col-md-6">
+                <table class="table caption-top">
+                 <caption>Mouses Available</caption>
+                    <tbody *ngFor = "let products of products">
+                        <tr *ngIf = "products.category === 'Mouses'" >
+                        <app-product-item [product] = "products"></app-product-item>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+ 
+
+   
